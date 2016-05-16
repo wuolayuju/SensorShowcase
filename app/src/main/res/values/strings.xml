@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SensorShowcase</string>
+    <string name="sensorInfo"></string>
+    <string name="valuesSensorLabel">Sensor Values</string>
+    <string name="button_sensor_activity">Sensor Activity</string>
+    <string name="sensor_info_label">Sensor Info</string>
+    <string name="sensor_attribute_label">Sensor Attribute Label</string>
+    <string name="sensor_attribute_info">Sensor Attribute Info</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>
