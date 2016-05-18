@@ -6,9 +6,8 @@
     android:padding="16dp"
     tools:context=".input_devices.CameraActivity">
 
-    <android.opengl.GLSurfaceView
-        android:id="@+id/camera_surface_view"
+    <FrameLayout
+        android:id="@+id/camera_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="match_parent" />
 </RelativeLayout>

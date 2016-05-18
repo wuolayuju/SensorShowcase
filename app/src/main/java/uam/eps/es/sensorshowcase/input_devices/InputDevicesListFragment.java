@@ -1,6 +1,8 @@
 package uam.eps.es.sensorshowcase.input_devices;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
@@ -61,8 +63,24 @@ public class InputDevicesListFragment extends ListFragment implements AdapterVie
         getListView().setOnItemClickListener(this);
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private List<Map<String, String>> loadInputList() {
         ArrayList<Map<String, String>> inputList = new ArrayList<>();
+
+        // using camera manager when available
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+     /*       CameraManager cameraManager = (CameraManager)
+                    getActivity().getSystemService(Context.CAMERA_SERVICE);
+            try {
+                String[] cameraIdList = cameraManager.getCameraIdList();
+                for (String cameraId : cameraIdList) {
+                    CameraCharacteristics cameraCharacteristics = cameraManager.getCameraCharacteristics(cameraId);
+                    Integer integer = cameraCharacteristics.get(CameraCharacteristics.LENS_FACING);
+                }
+            } catch (CameraAccessException e) {
+                Log.d("ERROR", "Error accessing camera: " + e.getLocalizedMessage());
+            }*/
+        }
 
         int numberOfCameras = getNumberOfCameras();
         for (int i = 0; i < numberOfCameras; i++) {

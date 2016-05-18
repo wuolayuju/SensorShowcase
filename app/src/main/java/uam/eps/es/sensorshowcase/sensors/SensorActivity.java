@@ -53,7 +53,8 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         mSensorInfoListView = (ListView) findViewById(R.id.sensorInfoListView);
 
         List<Map<String, String>> attributeList = loadSensorAttributeData();
-        mAttributeListAdapter = new SimpleAdapter(this, attributeList, R.layout.sensor_info_list_item, from, to);
+        mAttributeListAdapter = new SimpleAdapter(this, attributeList,
+                R.layout.sensor_info_list_item, from, to);
         mSensorInfoListView.setAdapter(mAttributeListAdapter);
     }
 
