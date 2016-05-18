@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="uam.eps.es.sensorshowcase">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,10 +20,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SensorActivity"
+            android:name=".sensors.SensorActivity"
             android:label="Sensor Activity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".input_devices.CameraActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

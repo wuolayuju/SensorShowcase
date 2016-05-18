@@ -1,4 +1,4 @@
-package uam.eps.es.sensorshowcase;
+package uam.eps.es.sensorshowcase.sensors;
 
 /**
  * Created by Ari on 15/05/2016.

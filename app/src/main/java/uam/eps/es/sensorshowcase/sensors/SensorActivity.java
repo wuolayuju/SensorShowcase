@@ -1,4 +1,4 @@
-package uam.eps.es.sensorshowcase;
+package uam.eps.es.sensorshowcase.sensors;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import uam.eps.es.sensorshowcase.R;
 
 /**
  * Created by Ari on 15/05/2016.
