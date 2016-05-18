@@ -5,11 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Ari on 15/05/2016.
@@ -37,8 +33,8 @@ public class SensorListAdapter extends ArrayAdapter<SensorPOJO> {
 
         SensorPOJO sensorItem = mData[position];
 
-        TextView sensorName = (TextView) convertView.findViewById(R.id.item_sensor_name);
-        TextView sensorInfo = (TextView) convertView.findViewById(R.id.item_sensor_info);
+        TextView sensorName = (TextView) convertView.findViewById(R.id.item_title_large);
+        TextView sensorInfo = (TextView) convertView.findViewById(R.id.item_info_medium);
 
         sensorName.setText(sensorItem.name);
         sensorInfo.setText(sensorItem.vendor + " version " + sensorItem.version);

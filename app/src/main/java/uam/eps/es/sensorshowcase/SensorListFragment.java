@@ -32,7 +32,7 @@ public class SensorListFragment extends ListFragment implements AdapterView.OnIt
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_sensor_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_list, container, false);
         return view;
     }
 
@@ -45,9 +45,9 @@ public class SensorListFragment extends ListFragment implements AdapterView.OnIt
         mSensorListAdapter = new SimpleAdapter(
                 getActivity(),
                 sensorList,
-                R.layout.list_item_sensor,
+                R.layout.list_item_large,
                 new String[]{"sensor_name", "sensor_vendor"},
-                new int[]{R.id.item_sensor_name, R.id.item_sensor_info});
+                new int[]{R.id.item_title_large, R.id.item_info_medium});
         setListAdapter(mSensorListAdapter);
 
         getListView().setOnItemClickListener(this);

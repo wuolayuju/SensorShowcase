@@ -1,18 +1,13 @@
 package uam.eps.es.sensorshowcase;
 
-import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -36,7 +31,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
     private SimpleAdapter mAttributeListAdapter;
 
     private final String[] from = { "attributeName", "attributeValue"};
-    private final int[] to = { R.id.sensorAttributeLabel, R.id.sensorAttributeInfo};
+    private final int[] to = { R.id.item_title_medium, R.id.item_info_small};
 
 
     @Override
