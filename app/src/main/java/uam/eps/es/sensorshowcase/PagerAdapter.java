@@ -9,6 +9,9 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  */
 public class PagerAdapter extends FragmentStatePagerAdapter {
 
+    private final int PAGE_COUNT=2;
+    private String tabTitles[] = new String[] { "SENSORS", "INPUT"};
+
     public PagerAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -21,11 +24,11 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 100;
+        return PAGE_COUNT;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return "TAB " + position;
+        return tabTitles[position];
     }
 }
