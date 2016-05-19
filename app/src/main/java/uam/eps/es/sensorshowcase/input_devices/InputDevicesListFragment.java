@@ -2,6 +2,7 @@ package uam.eps.es.sensorshowcase.input_devices;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -98,6 +99,8 @@ public class InputDevicesListFragment extends ListFragment implements AdapterVie
             }
         }
 
+        inputList.add(putInputData("Built-in Microphone", "Audio Recording", MICROPHONE, MediaRecorder.AudioSource.MIC));
+
         return inputList;
     }
 
@@ -121,6 +124,14 @@ public class InputDevicesListFragment extends ListFragment implements AdapterVie
             cameraActivityIntent.putExtra("CAMERA_NAME", cameraName);
             cameraActivityIntent.putExtra("CAMERA_ID", cameraId);
             startActivity(cameraActivityIntent);
+        }
+        else if (inputType == MICROPHONE) {
+            int audioId = Integer.parseInt(input.get("input_id"));
+            String audioInfo = input.get("input_info");
+            Intent audioActivityIntent = new Intent(getActivity(), AudioActivity.class);
+            audioActivityIntent.putExtra("MIC_NAME", audioInfo);
+            audioActivityIntent.putExtra("MIC_ID", audioId);
+            startActivity(audioActivityIntent);
         }
     }
 }
