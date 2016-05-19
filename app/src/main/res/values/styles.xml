@@ -16,6 +16,8 @@
 
     <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
         <item name="tabMaxWidth">0dp</item>
+        <item name="tabGravity">center</item>
+        <item name="tabMode">scrollable</item>
         <item name="tabIndicatorColor">@color/colorAccent</item>
         <item name="tabIndicatorHeight">4dp</item>
         <item name="tabBackground">@color/colorPrimary</item>

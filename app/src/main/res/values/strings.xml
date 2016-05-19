@@ -12,4 +12,5 @@
     <string name="start_recording">Start recording</string>
     <string name="play_recording">Play Recording</string>
     <string name="stop_recording">Stop Recording</string>
+    <string name="no_bluetooth_devices_in_range">No Bluetooth devices in range</string>
 </resources>

@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import uam.eps.es.sensorshowcase.actuators.ActuatorListFragment;
+import uam.eps.es.sensorshowcase.external_devices.ExternalDevicesFragment;
 import uam.eps.es.sensorshowcase.input_devices.InputDevicesListFragment;
 import uam.eps.es.sensorshowcase.sensors.SensorListFragment;
 
@@ -35,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public static class PagerAdapter extends FragmentStatePagerAdapter {
 
-        private final int PAGE_COUNT=2;
-        private String tabTitles[] = new String[] { "SENSORS", "INPUT DEVICES"};
+        private final int PAGE_COUNT=4;
+        private String tabTitles[] = new String[] { "SENSORS", "INPUT DEVICES", "ACTUATORS", "EXTERNAL DEVICES"};
 
         public PagerAdapter(FragmentManager fm) {
             super(fm);
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                     return new SensorListFragment();
                 case 1:
                     return new InputDevicesListFragment();
+                case 2:
+                    return new ActuatorListFragment();
+                case 3:
+                    return new ExternalDevicesFragment();
                 default:
                     return null;
             }
